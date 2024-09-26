@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.755);
+    min-height: 100%;
+}
+
+pre.appInfo{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.796);
+    font-size: large;
+    font-weight: 500;
+}
+
+h2.body-container-header{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.796);
+    font-size: x-large;
+    font-weight: 500;
+}
+
+h2.body-container-header-error{
+	text-align: center;
+    color: red;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+form.body-container-form{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+div.body-container{
+    border-radius: 10px;
+    background-color: rgba(101, 4, 4, 0.427);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+label{
+    color: rgba(255, 255, 255, 0.796);
+    font-size: 18px;
+    display: block;
+}
+
+input[type=text], input[type=password]{
+    width: 70%;
+    margin-right: 30%;
+    background-color: rgba(161, 154, 154, 0.833);
+    color: rgba(255, 255, 255, 0.796);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type=radio]{
+    width: 20%;
+    margin-right: 2%;
+    background-color: rgba(161, 154, 154, 0.833);
+    color: rgba(255, 255, 255, 0.796);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+input[type=radio]{
+    height: 15px;
+    width: 15px;
+}
+
+.radio-container:hover{
+    background-color: rgba(96, 93, 93, 0.685);
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.596);
+}
+
+
+#username, #pass, #firstName, #newFirstName{
+    margin-bottom: 3%;
+}
+
+#currFirstName{
+    margin-bottom: 2%;
+}
+
+#currFirstNameP{
+    color: white;
+    font-weight: 900;
+}
+
+
+input[type=submit], input[type=reset], input[type=button]{
+    width: 90%;
+    background-color: rgba(161, 154, 154, 0.833);
+    color: rgba(255, 255, 255, 0.796);
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 12px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+    background-color: rgba(96, 93, 93, 0.685);;
+}
+
+input[type=reset]{
+    margin-top: 3%;
+}
+
+#retLink{
+    color: white;
+    background: rgb(98, 95, 95);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: 8%;
+}
+
+#retLink:hover{
+    background-color: rgba(96, 93, 93, 0.685);
+}
+
+a.homeLinks{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+h2.error-header{
+    text-align: center;
+    color: red;
+    font-size: x-large;
+    font-weight: 900;
+}
+
+
+
+/*************************************************************************/
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(161, 154, 154, 0.833);
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgba(161, 154, 154, 0.833);
+}
+
+input[type="file"] + label {
+    display: block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type="file"] + label:hover {
+    background-color: #45a049;
+}
+
+
+/**********************************************************************************/
+
+table{
+	margin-top: 10px;
+}
+
+.table-data{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-data td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: rgba(0, 0, 0, 0.763);
+    font-weight: bold;
+}
+
+tr.table-row-header td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: rgb(243, 222, 222);
+    font-weight: bold;
+}
+
+.table-data tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.table-data tr:hover {
+    background-color: #d4cbcbbe;
+}
+
+.table-data th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0c0d0deb;
+    color: rgb(255, 255, 255);
+}
+
+button.editButton, button.delButton{
+	width: 90%;
+	background-color: rgba(161, 154, 154, 0.833);
+    color: rgba(255, 255, 255, 0.796);
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button-container input {
+    width: auto;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.button-container input[type="submit"],
+.button-container input[type="button"] {
+    width: 120px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+div.popup-container{
+	position: fixed;
+	top: 20%;
+	left: 25%;
+    border-radius: 10px;
+    background-color: rgba(18, 17, 17, 0.71);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+form.popup-container-form{
+	width: 100%;
+    padding: 30px;
+}
+
+.text-end {
+    text-align: center;
+}
+
+#btnEnableNotifications, #btnInstall, #btnShare {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+}

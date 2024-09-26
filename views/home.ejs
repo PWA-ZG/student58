@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <script src="./home.js"></script>
+    <link rel="manifest" href="./manifest.json">
+<body onload="listTasks(); hidePopup();">
+    <%- include('partials/header'); %>
+
+    <div class="text-end">
+        <button id="btnEnableNotifications" class="btn btn-outline-success">
+            Subscribe for info!
+            <i class="bi bi-bell"></i>
+        </button>
+    </div>
+
+    <div class="text-end">
+        <button id="btnInstall" class="btn btn-outline-success">
+            Install the app!
+            <i class="bi bi-bell"></i>
+        </button>
+    </div>
+
+    <div class="text-end">
+        <button id="btnShare" class="btn btn-outline-success">
+            Share page!
+            <i class="bi bi-bell"></i>
+        </button>
+    </div>
+
+    <div id="tableContainer"></div>
+
+    <h2 class="body-container-header">Create new task:</h2>
+
+    <div class="body-container">
+        <form class="body-container-form" action="/" method="POST" onsubmit="handleSubmit(event)">
+            <label for="taskTitle">Task title: </label>
+            <input type="text" id="taskTitle" name="taskTitle" placeholder="Enter task title..." required>
+            
+            <label for="taskDescription">Task description: </label>
+            <input type="text" id="taskDescription" name="taskDescription" placeholder="Enter task description..." required>
+
+            <label for="dueDateTime">Due Date and Time:</label>
+            <input type="datetime-local" id="dueDateTime" name="dueDateTime" required>
+
+            <label for="imageInput">Attach file/image:</label>
+            <input type="file" accept="image/*" id="imageInput" name="imageInput" onchange="handleFileSelection(event)" required>
+            <img id="imagePreview" alt="Preview" style="max-width: 80%; max-height: 150px;">
+        
+            <input type="submit" value="create task">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+    
+    <div class="popup-container" id="popup">
+        <form class="popup-container-form" action="/task/edit" method="POST" onsubmit="saveTaskEdit(event)">
+            <label for="editTaskTitle">Task Title:</label>
+            <input type="text" id="editTaskTitle">
+
+            <label for="editTaskDescription">Task Description:</label>
+            <input type="text" id="editTaskDescription">
+
+            <label for="editDueDateTime">Due Date and Time:</label>
+            <input type="datetime-local" id="editDueDateTime">
+
+            <input type="text" name="taskID" id="taskID" value="-1" hidden>
+            
+            <div class="button-container">
+                <input type="submit" value="Save">
+                <input type="button" value="Cancel" onclick="hidePopup()">
+            </div>
+        </form>
+    </div>
+
+    <script src="install.js"></script>
+    <script src="push.js"></script>
+    <script src="share.js"></script>
+
+</body>
+</html>
